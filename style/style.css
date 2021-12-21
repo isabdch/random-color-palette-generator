@@ -1,0 +1,70 @@
+@font-face {
+    font-family: myFont;
+    src: url(./SourceCodePro-VariableFont_wght.ttf);
+}
+
+body {
+    text-align: center;
+    font-family: myFont;
+    background-color: whitesmoke;
+}
+
+h2 {
+    margin-top: 250px;
+}
+
+span {
+    height: 350px;
+    width: 8%;
+    display: inline-block;
+    margin: 7px;
+    box-shadow: 2px 2px 7px rgb(190, 190, 190);
+    border-radius: 10px;
+}
+
+p {
+    margin-top: 280px;
+    display: inline-block;
+    background-color: rgb(245, 245, 245);
+    height: 35px;
+    width: 100%;
+    font-family: myFont;
+    font-weight: bold;
+    line-height: 35px;
+    font-size: small;
+}
+
+button {
+    background-color: rgb(226, 226, 226);
+    border: none;
+    box-shadow: 2px 2px 7px rgb(190, 190, 190);
+    font-family: myFont;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 10px;
+    outline: none;
+}
+
+button:active {
+    background-color: rgb(212, 228, 192);
+    box-shadow: 2px 2px 7px rgb(169, 194, 140);
+}
+
+a {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    position: fixed;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: x-small;
+    opacity: 0.5;
+}
