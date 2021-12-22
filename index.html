@@ -14,15 +14,16 @@
 <body>
     <h2>Random Color Palette Generator</h2>
     <div id="container">
-        <input id="default" type="radio" value="default" name="colortype" checked>
+        <input class="rd" id="default" type="radio" value="default" name="colortype" checked>
         <label for="default">Default</label>
-        <input id="pastel" type="radio" value="pastel" name="colortype">
+        <input class="rd" id="pastel" type="radio" value="pastel" name="colortype">
         <label for="pastel">Pastel</label>
-        <input id="dark" type="radio" value="dark" name="colortype">
+        <input class="rd" id="dark" type="radio" value="dark" name="colortype">
         <label for="dark">Dark</label>
     </div>
     <div></div>
-    Palette range: <input type="range" min="3" max="10" value="3"><br>
+    Palette range: <input id="range" type="range" min="3" max="10" value="5"
+        oninput="this.nextElementSibling.value = this.value"><output>5</output><br>
     <button id="generate">Generate</button><br>
     <a href="https://github.com/isabdch" target="_blank">@isabdch</a>
 </body>

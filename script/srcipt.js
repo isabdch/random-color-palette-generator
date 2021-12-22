@@ -2,8 +2,40 @@ let generate = document.getElementById("generate");
 let span = document.getElementsByTagName("span");
 let h2 = document.getElementsByTagName("h2")[0];
 let p = document.getElementsByTagName("p");
+let inputR = document.getElementsByClassName("rd");
+let dft = document.getElementById("default");
+let pastel = document.getElementById("pastel");
+let dark = document.getElementById("dark");
+let range = document.getElementById("range");
 
 generate.addEventListener("click", createPalette);
+dft.addEventListener("click", dftS);
+pastel.addEventListener("click", pastelS);
+dark.addEventListener("click", darkS);
+
+function dftS() {
+  if ((dft.ariaChecked = "true")) {
+    pastel.ariaChecked = "false";
+    dark.ariaChecked = "false";
+  }
+  generate.addEventListener("click", colorsDefault);
+}
+
+function pastelS() {
+  if ((pastel.ariaChecked = "true")) {
+    dft.ariaChecked = "false";
+    dark.ariaChecked = "false";
+  }
+  generate.addEventListener("click", colorsPastel);
+}
+
+function darkS() {
+  if ((dark.ariaChecked = "true")) {
+    pastel.ariaChecked = "false";
+    dft.ariaChecked = "false";
+  }
+  generate.addEventListener("click", colorsDark);
+}
 
 generate.addEventListener("click", colorsDefault);
 
@@ -11,13 +43,23 @@ generate.addEventListener("click", height);
 
 function createPalette() {
   let div = document.getElementsByTagName("div")[1];
-  div.innerHTML = "<span><p></p></span>".repeat(getRandomNumber(3, 11));
-}
-
-function getRandomNumber(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
+  if (range.value == 3) {
+    div.innerHTML = "<span><p></p></span>".repeat(3);
+  } else if (range.value == 4) {
+    div.innerHTML = "<span><p></p></span>".repeat(4);
+  } else if (range.value == 5) {
+    div.innerHTML = "<span><p></p></span>".repeat(5);
+  } else if (range.value == 6) {
+    div.innerHTML = "<span><p></p></span>".repeat(6);
+  } else if (range.value == 7) {
+    div.innerHTML = "<span><p></p></span>".repeat(7);
+  } else if (range.value == 8) {
+    div.innerHTML = "<span><p></p></span>".repeat(8);
+  } else if (range.value == 9) {
+    div.innerHTML = "<span><p></p></span>".repeat(9);
+  } else if (range.value == 10) {
+    div.innerHTML = "<span><p></p></span>".repeat(10);
+  }
 }
 
 function randomColor() {
@@ -426,5 +468,5 @@ function colorsDark() {
 }
 
 function height() {
-  h2.style.marginTop = "25px";
+  h2.style.marginTop = "20px";
 }
