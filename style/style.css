@@ -18,7 +18,7 @@ h2 {
     margin-bottom: 25px;
 }
 
-.b {
+.content {
     display: inline-block;
     transition: all 0.1s ease;
     transform: scale(1)
@@ -44,7 +44,7 @@ h2 {
     outline: none;
 }
 
-.b:hover {
+.content:hover {
     transform: scale(1.1) perspective(1px);
 }
 
@@ -157,7 +157,7 @@ a {
 }
 
 @media screen and (max-width: 500px) {
-    .b {
+    .content {
         display: block;
         margin-top: 30px;
     }
@@ -176,7 +176,7 @@ a {
 }
 
 @media screen and (max-width: 300px) {
-    .b {
+    .content {
         display: block;
         margin-top: 30px;
     }

@@ -2,7 +2,6 @@ let generate = document.getElementById("generate");
 let span = document.getElementsByTagName("span");
 let h2 = document.getElementsByTagName("h2")[0];
 let p = document.getElementsByTagName("p");
-let inputR = document.getElementsByClassName("rd");
 let dft = document.getElementById("default");
 let pastel = document.getElementById("pastel");
 let dark = document.getElementById("dark");
