@@ -14,27 +14,24 @@ pastel.addEventListener("click", pastelS);
 dark.addEventListener("click", darkS);
 
 function dftS() {
-  if ((dft.ariaChecked = "true")) {
-    pastel.ariaChecked = "false";
-    dark.ariaChecked = "false";
+  dft.setAttribute("checked", true);
+  if ((dft.checked = true)) {
+    generate.addEventListener("click", colorsDefault);
   }
-  generate.addEventListener("click", colorsDefault);
-}
-
-function pastelS() {
-  if ((pastel.ariaChecked = "true")) {
-    dft.ariaChecked = "false";
-    dark.ariaChecked = "false";
-  }
-  generate.addEventListener("click", colorsPastel);
 }
 
 function darkS() {
-  if ((dark.ariaChecked = "true")) {
-    pastel.ariaChecked = "false";
-    dft.ariaChecked = "false";
+  dark.setAttribute("checked", true);
+  if ((dark.checked = true)) {
+    generate.addEventListener("click", colorsDark);
   }
-  generate.addEventListener("click", colorsDark);
+}
+
+function pastelS() {
+  pastel.setAttribute("checked", true);
+  if ((pastel.checked = true)) {
+    generate.addEventListener("click", colorsPastel);
+  }
 }
 
 generate.addEventListener("click", colorsDefault);
