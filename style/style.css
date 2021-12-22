@@ -13,11 +13,67 @@ h2 {
     margin-top: 250px;
 }
 
+#container {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+#container input[type="radio"] {
+    display: none;
+}
+
+#container label {
+    background-color: rgb(226, 226, 226);
+    border: none;
+    box-shadow: 2px 2px 7px rgb(190, 190, 190);
+    font-family: myFont;
+    font-size: small;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 14.5px;
+    margin-right: 14.5px;
+    padding: 8px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 10px;
+    outline: none;
+}
+
+#container input[type="radio"]:checked+label {
+    background-color: rgb(212, 228, 192);
+    box-shadow: 2px 2px 7px rgb(169, 194, 140);
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin-top: -4px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 5px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(218, 214, 214);
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px rgb(163, 158, 158);
+    background: rgb(169, 194, 140);
+    margin-top: -4px;
+    cursor: pointer;
+}
+
 span {
     height: 350px;
     width: 8%;
     display: inline-block;
     margin: 7px;
+    margin-bottom: 26px;
     box-shadow: 2px 2px 7px rgb(190, 190, 190);
     border-radius: 10px;
 }
@@ -34,7 +90,11 @@ p {
     font-size: small;
 }
 
-button {
+input {
+    margin-top: 20px;
+}
+
+#generate {
     background-color: rgb(226, 226, 226);
     border: none;
     box-shadow: 2px 2px 7px rgb(190, 190, 190);
@@ -42,7 +102,7 @@ button {
     font-size: medium;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 25px;
     padding: 10px;
     padding-left: 60px;
     padding-right: 60px;
@@ -50,7 +110,7 @@ button {
     outline: none;
 }
 
-button:active {
+#generate:active {
     background-color: rgb(212, 228, 192);
     box-shadow: 2px 2px 7px rgb(169, 194, 140);
 }
