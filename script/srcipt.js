@@ -2,20 +2,20 @@ let generate = document.getElementById("generate");
 let span = document.getElementsByTagName("span");
 let h2 = document.getElementsByTagName("h2")[0];
 let p = document.getElementsByTagName("p");
-let dft = document.getElementById("default");
+let Default = document.getElementById("default");
 let pastel = document.getElementById("pastel");
 let dark = document.getElementById("dark");
 let range = document.getElementById("range");
 
 generate.addEventListener("click", createPalette);
 
-dft.addEventListener("click", dftS);
+Default.addEventListener("click", DefaultS);
 pastel.addEventListener("click", pastelS);
 dark.addEventListener("click", darkS);
 
-function dftS() {
-  dft.setAttribute("checked", true);
-  if ((dft.checked = true)) {
+function DefaultS() {
+  Default.setAttribute("checked", true);
+  if ((Default.checked = true)) {
     generate.addEventListener("click", colorsDefault);
   }
 }
