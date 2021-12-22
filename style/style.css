@@ -18,6 +18,12 @@ h2 {
     margin-bottom: 25px;
 }
 
+.b {
+    display: inline-block;
+    transition: all 0.1s ease;
+    transform: scale(1)
+}
+
 #container input[type="radio"] {
     display: none;
 }
@@ -38,9 +44,13 @@ h2 {
     outline: none;
 }
 
+.b:hover {
+    transform: scale(1.1) perspective(1px);
+}
+
 #container input[type="radio"]:checked+label {
-    background-color: rgb(212, 228, 192);
-    box-shadow: 2px 2px 7px rgb(169, 194, 140);
+    background-color: rgb(222, 207, 230);
+    box-shadow: 2px 2px 7px rgb(197, 176, 209);
 }
 
 input[type=range] {
@@ -62,7 +72,7 @@ input[type=range]::-webkit-slider-thumb {
     width: 13px;
     border-radius: 50%;
     box-shadow: 2px 2px 4px rgb(163, 158, 158);
-    background: rgb(169, 194, 140);
+    background: rgb(197, 176, 209);
     margin-top: -4px;
     cursor: pointer;
 }
@@ -113,11 +123,17 @@ input {
     padding-right: 60px;
     border-radius: 10px;
     outline: none;
+    transition: all 0.1s ease;
+    transform: scale(1)
+}
+
+#generate:hover {
+    transform: scale(1.1);
 }
 
 #generate:active {
-    background-color: rgb(212, 228, 192);
-    box-shadow: 2px 2px 7px rgb(169, 194, 140);
+    background-color: rgb(222, 207, 230);
+    box-shadow: 2px 2px 7px rgb(197, 176, 209);
 }
 
 a {
@@ -132,4 +148,49 @@ a {
     transform: translateX(-50%);
     font-size: x-small;
     opacity: 0.5;
+}
+
+@media screen and (max-width: 800px) {
+    p {
+        font-size: x-small;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .b {
+        display: block;
+        margin-top: 30px;
+    }
+
+    p {
+        font-size: xx-small;
+    }
+
+    span {
+        width: 30%;
+    }
+
+    #generate {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .b {
+        display: block;
+        margin-top: 30px;
+    }
+
+    span {
+        width: 30%;
+    }
+
+    p {
+        font-size: xx-small;
+    }
+
+    #generate {
+        margin-bottom: 20px;
+    }
+    
 }

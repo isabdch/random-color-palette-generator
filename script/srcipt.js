@@ -42,7 +42,7 @@ generate.addEventListener("click", colorsDefault);
 generate.addEventListener("click", height);
 
 function createPalette() {
-  let div = document.getElementsByTagName("div")[1];
+  let div = document.getElementById("palette");
   if (range.value == 3) {
     div.innerHTML = "<span><p></p></span>".repeat(3);
   } else if (range.value == 4) {
