@@ -8,7 +8,6 @@ let dark = document.getElementById("dark");
 let range = document.getElementById("range");
 
 generate.addEventListener("click", createPalette);
-
 Default.addEventListener("click", DefaultS);
 pastel.addEventListener("click", pastelS);
 dark.addEventListener("click", darkS);
