@@ -5,9 +5,9 @@ let p = document.getElementsByTagName("p");
 let Default = document.getElementById("default");
 let pastel = document.getElementById("pastel");
 let dark = document.getElementById("dark");
-let range = document.getElementById("range");
+let range = document.getElementById("range"); 
 
-generate.addEventListener("click", createPalette);
+generate.addEventListener("click", createPalette); 
 Default.addEventListener("click", DefaultS);
 pastel.addEventListener("click", pastelS);
 dark.addEventListener("click", darkS);
@@ -474,6 +474,6 @@ function colorsDark() { // put dark colors on span.
   }
 }
 
-function height() { // when the button generate is clicked, h2 goes up.
+function height() { // when the button generate is clicked, h2 goes up (and consequently the rest of the elements).
   h2.style.marginTop = "20px";
 }
