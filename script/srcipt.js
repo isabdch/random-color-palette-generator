@@ -25,6 +25,7 @@ function DefaultS() { // if checked, default radio button will show default colo
   Default.setAttribute("checked", true);
   if ((Default.checked = true)) {
     generate.addEventListener("click", colorsDefault);
+    generate.addEventListener("click", height);
   }
 }
 
@@ -33,6 +34,7 @@ function darkS() { // if checked, dark radio button will show dark colors.
   dark.setAttribute("checked", true);
   if ((dark.checked = true)) {
     generate.addEventListener("click", colorsDark);
+    generate.addEventListener("click", height);
   }
 }
 
@@ -41,6 +43,7 @@ function pastelS() { // if checked, pastel radio button will show pastel colors.
   pastel.setAttribute("checked", true);
   if ((pastel.checked = true)) {
     generate.addEventListener("click", colorsPastel);
+    generate.addEventListener("click", height);
   }
 }
 
