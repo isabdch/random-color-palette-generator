@@ -12,7 +12,16 @@ Default.addEventListener("click", DefaultS);
 pastel.addEventListener("click", pastelS);
 dark.addEventListener("click", darkS);
 
+function removeE() {
+  let newGenerate = generate.cloneNode();
+  newGenerate.innerHTML = "Generate";
+  generate.replaceWith(newGenerate);
+  generate = newGenerate;
+  generate.addEventListener("click", createPalette);
+}
+
 function DefaultS() {
+  removeE();
   Default.setAttribute("checked", true);
   if ((Default.checked = true)) {
     generate.addEventListener("click", colorsDefault);
@@ -20,6 +29,7 @@ function DefaultS() {
 }
 
 function darkS() {
+  removeE();
   dark.setAttribute("checked", true);
   if ((dark.checked = true)) {
     generate.addEventListener("click", colorsDark);
@@ -27,6 +37,7 @@ function darkS() {
 }
 
 function pastelS() {
+  removeE();
   pastel.setAttribute("checked", true);
   if ((pastel.checked = true)) {
     generate.addEventListener("click", colorsPastel);
