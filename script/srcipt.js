@@ -12,7 +12,7 @@ Default.addEventListener("click", DefaultS);
 pastel.addEventListener("click", pastelS);
 dark.addEventListener("click", darkS);
 
-function removeE() {
+function removeE() { // function to prevent variable generate has two events and get errors.
   let newGenerate = generate.cloneNode();
   newGenerate.innerHTML = "Generate";
   generate.replaceWith(newGenerate);
@@ -20,7 +20,7 @@ function removeE() {
   generate.addEventListener("click", createPalette);
 }
 
-function DefaultS() {
+function DefaultS() { // if checked, default radio button will show default colors.
   removeE();
   Default.setAttribute("checked", true);
   if ((Default.checked = true)) {
@@ -28,7 +28,7 @@ function DefaultS() {
   }
 }
 
-function darkS() {
+function darkS() { // if checked, dark radio button will show dark colors.
   removeE();
   dark.setAttribute("checked", true);
   if ((dark.checked = true)) {
@@ -36,7 +36,7 @@ function darkS() {
   }
 }
 
-function pastelS() {
+function pastelS() { // if checked, pastel radio button will show pastel colors.
   removeE();
   pastel.setAttribute("checked", true);
   if ((pastel.checked = true)) {
@@ -48,7 +48,7 @@ generate.addEventListener("click", colorsDefault);
 
 generate.addEventListener("click", height);
 
-function createPalette() {
+function createPalette() { // create span with colors.
   let div = document.getElementById("palette");
   if (range.value == 3) {
     div.innerHTML = "<span><p></p></span>".repeat(3);
@@ -69,7 +69,7 @@ function createPalette() {
   }
 }
 
-function randomColor() {
+function randomColor() { // create random default colors.
   return (
     "#" +
     ("00000" + Math.floor(Math.random() * Math.pow(16, 6)).toString(16)).slice(
@@ -78,7 +78,7 @@ function randomColor() {
   );
 }
 
-function randomPastel() {
+function randomPastel() { // create random pastel colors.
   let color = "#";
   for (let i = 0; i < 3; i++)
     color += (
@@ -87,7 +87,7 @@ function randomPastel() {
   return color;
 }
 
-function randomDark() {
+function randomDark() { // create random dark colors.
   let color = "#";
   for (let i = 0; i < 3; i++)
     color += (
@@ -96,7 +96,7 @@ function randomDark() {
   return color;
 }
 
-function colorsDefault() {
+function colorsDefault() { // put default colors on span.
   if (span.length == 3) {
     var a = (span[0].style.backgroundColor = randomColor());
     var b = (span[1].style.backgroundColor = randomColor());
@@ -222,7 +222,7 @@ function colorsDefault() {
   }
 }
 
-function colorsPastel() {
+function colorsPastel() { // put pastel colors on span.
   if (span.length == 3) {
     var a = (span[0].style.backgroundColor = randomPastel());
     var b = (span[1].style.backgroundColor = randomPastel());
@@ -348,7 +348,7 @@ function colorsPastel() {
   }
 }
 
-function colorsDark() {
+function colorsDark() { // put dark colors on span.
   if (span.length == 3) {
     var a = (span[0].style.backgroundColor = randomDark());
     var b = (span[1].style.backgroundColor = randomDark());
@@ -474,6 +474,6 @@ function colorsDark() {
   }
 }
 
-function height() {
+function height() { // when the button generate is clicked, h2 goes up.
   h2.style.marginTop = "20px";
 }
