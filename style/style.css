@@ -15,13 +15,15 @@ h2 {
 
 #container {
     margin-top: 20px;
-    margin-bottom: 25px; /* div containing default, pastel and dark buttons */
+    margin-bottom: 25px;
+    /* div containing default, pastel and dark buttons */
 }
 
 .content {
     display: inline-block;
     transition: all 0.1s ease;
-    transform: scale(1) /* div containing radio buttons and labels */
+    transform: scale(1)
+        /* div containing radio buttons and labels */
 }
 
 #container input[type="radio"] {
@@ -90,7 +92,8 @@ span {
     margin: 7px;
     margin-bottom: 26px;
     box-shadow: 2px 2px 7px rgb(190, 190, 190);
-    border-radius: 10px; /* containing the colors */
+    border-radius: 10px;
+    /* containing the colors */
 }
 
 p {
@@ -102,7 +105,8 @@ p {
     font-family: myFont;
     font-weight: bold;
     line-height: 35px;
-    font-size: small; /* containing the hex codes */
+    font-size: small;
+    /* containing the hex codes */
 }
 
 input {
@@ -139,7 +143,7 @@ input {
 a {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
-    position: fixed;
+    position: absolute;
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -192,5 +196,5 @@ a {
     #generate {
         margin-bottom: 20px;
     }
-    
+
 }
