@@ -5,15 +5,12 @@
 ## Table of Contetents
 
 - [Project Description](#project-description)
-- [Technologies](#technologies)
 - [Status](#status)
 - [Inspiration](#inspiration)
 
 ## Project Description
 
 A simple website that generates palettes with random colors. You can choose a range between 3 to 10 colors to show up and also the type of color of your choice: default, pastel, or dark colors. Each one of them shows its own HEX code.
-
-## Technologies
 
 Project is created with:
 
