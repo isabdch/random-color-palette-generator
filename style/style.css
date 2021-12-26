@@ -167,7 +167,7 @@ a {
     }
 
     p {
-        font-size: xx-small;
+        font-size: small;
     }
 
     span {
@@ -187,10 +187,6 @@ a {
 
     span {
         width: 30%;
-    }
-
-    p {
-        font-size: xx-small;
     }
 
     #generate {
