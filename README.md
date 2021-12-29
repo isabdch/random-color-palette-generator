@@ -32,4 +32,4 @@ For now, this project is finished. Possibly in the future I might add new featur
 
 ## Inspiration
 
-Besides programming, I really enjoy drawing on digital. So it's very common for me to go searching for inspiration. I frequently go to [Coolors.co](https://coolors.co/) to get color palettes inspiration and this project idea popped into my head. At the moment I'm studying JavaScript, so with all of this I could combine business with pleasure. I could practice my skills and also enjoy the project because it's related to something I like.
+Besides programming, I really enjoy drawing on digital. So it's very common for me to go searching for inspiration. I frequently go to [Coolors.co](https://coolors.co/) to get color palettes inspiration and eventually this project idea popped into my head. At the moment I'm studying JavaScript, so with all of this I could combine business with pleasure. I could practice my skills and also enjoy the project because it's related to something I like.
