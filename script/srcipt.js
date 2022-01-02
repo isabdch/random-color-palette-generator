@@ -478,5 +478,5 @@ function colorsDark() { // put dark colors on span.
 }
 
 function height() { // when the button generate is clicked, h2 goes up (and consequently the rest of the elements).
-  h2.style.marginTop = "20px";
+  h2.style.marginTop = "25px";
 }
