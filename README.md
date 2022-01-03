@@ -1,6 +1,7 @@
 # Random Collor Palette Generator Website
 
 ## [SITE HERE](https://isabdch.github.io/random-color-palette-generator/)
+![](images/color-palette.png)
 
 ## Table of Contetents
 
