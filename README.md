@@ -3,7 +3,7 @@
 ## [SITE HERE](https://isabdch.github.io/random-color-palette-generator/)
 ![](images/color-palette.png)
 
-## Table of Contetents
+## Table of Contents
 
 - [Project Description](#project-description)
 - [Status](#status)
