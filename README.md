@@ -1,6 +1,7 @@
 # Random Collor Palette Generator Website
 
 ![](https://img.shields.io/github/forks/isabdch/random-color-palette-generator?color=blueviolet&style=for-the-badge)
+![](https://img.shields.io/github/languages/count/isabdch/random-color-palette-generator?color=blueviolet&style=for-the-badge)
 
 ## [SITE HERE](https://isabdch.github.io/random-color-palette-generator/)
 ![](images/color-palette.png)
