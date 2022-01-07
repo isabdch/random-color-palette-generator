@@ -25,7 +25,7 @@ Project is created with:
 
 - ### JavaScript
 
-  To give real interactivity to the whole website. I used multiple events and functions to create the palette, give it all its respective colors accordingly to the type of color and its own HEX codes. Beyond that, I also added a function that makes it possible to choose the palette range.
+  I used multiple events and functions to create the palette, give it all its respective colors accordingly to the type of color and its own HEX codes. Beyond that, I also added a function that makes it possible to choose the palette range.
 
 ## Status
 
