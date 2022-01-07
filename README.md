@@ -4,6 +4,8 @@
 ![](https://img.shields.io/github/languages/count/isabdch/random-color-palette-generator?color=%23e998cd&style=for-the-badge)
 ![](https://img.shields.io/github/repo-size/isabdch/random-color-palette-generator?color=%23e998cd&style=for-the-badge)
 ![](https://img.shields.io/github/issues/isabdch/random-color-palette-generator?color=%23e998cd&style=for-the-badge)
+![](https://img.shields.io/github/stars/isabdch/random-color-palette-generator?color=%23e998cd&style=for-the-badge)
+![](https://img.shields.io/github/license/isabdch/random-color-palette-generator?color=%23e998cd&style=for-the-badge)
 
 ## [SITE HERE](https://isabdch.github.io/random-color-palette-generator/)
 ![](images/color-palette.png)
