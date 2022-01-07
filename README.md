@@ -1,5 +1,9 @@
 # Random Collor Palette Generator Website
 
+![GitHub repo size](https://img.shields.io/github/repo-size/isabdch/README-template?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/isabdch/README-template?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/isabdch/README-template?style=for-the-badge)
+
 ## [SITE HERE](https://isabdch.github.io/random-color-palette-generator/)
 ![](images/color-palette.png)
 
