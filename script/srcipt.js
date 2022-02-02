@@ -163,65 +163,65 @@ function colorsDefault() { // put default colors on span.
   }
 
   if (span.length == 3) {
-    p[0].innerHTML = a;
-    p[1].innerHTML = b;
-    p[2].innerHTML = c;
+    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${a}</a>`;
+    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${b}</a>`;
+    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${c}</a>`;
   } else if (span.length == 4) {
-    p[0].innerHTML = a;
-    p[1].innerHTML = b;
-    p[2].innerHTML = c;
-    p[3].innerHTML = d;
+    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${a}</a>`;
+    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${b}</a>`;
+    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${c}</a>`;
+    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${d}</a>`;
   } else if (span.length == 5) {
-    p[0].innerHTML = a;
-    p[1].innerHTML = b;
-    p[2].innerHTML = c;
-    p[3].innerHTML = d;
-    p[4].innerHTML = e;
+    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${a}</a>`;
+    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${b}</a>`;
+    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${c}</a>`;
+    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${d}</a>`;
+    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${e}</a>`;
   } else if (span.length == 6) {
-    p[0].innerHTML = a;
-    p[1].innerHTML = b;
-    p[2].innerHTML = c;
-    p[3].innerHTML = d;
-    p[4].innerHTML = e;
-    p[5].innerHTML = f;
+    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${a}</a>`;
+    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${b}</a>`;
+    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${c}</a>`;
+    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${d}</a>`;
+    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${e}</a>`;
+    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${f}</a>`;
   } else if (span.length == 7) {
-    p[0].innerHTML = a;
-    p[1].innerHTML = b;
-    p[2].innerHTML = c;
-    p[3].innerHTML = d;
-    p[4].innerHTML = e;
-    p[5].innerHTML = f;
-    p[6].innerHTML = g;
+    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${a}</a>`;
+    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${b}</a>`;
+    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${c}</a>`;
+    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${d}</a>`;
+    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${e}</a>`;
+    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${f}</a>`;
+    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${g}</a>`;
   } else if (span.length == 8) {
-    p[0].innerHTML = a;
-    p[1].innerHTML = b;
-    p[2].innerHTML = c;
-    p[3].innerHTML = d;
-    p[4].innerHTML = e;
-    p[5].innerHTML = f;
-    p[6].innerHTML = g;
-    p[7].innerHTML = h;
+    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${a}</a>`;
+    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${b}</a>`;
+    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${c}</a>`;
+    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${d}</a>`;
+    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${e}</a>`;
+    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${f}</a>`;
+    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${g}</a>`;
+    p[7].innerHTML = `<a onmouseover="this.style.color= '${h}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${h.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${h}</a>`;
   } else if (span.length == 9) {
-    p[0].innerHTML = a;
-    p[1].innerHTML = b;
-    p[2].innerHTML = c;
-    p[3].innerHTML = d;
-    p[4].innerHTML = e;
-    p[5].innerHTML = f;
-    p[6].innerHTML = g;
-    p[7].innerHTML = h;
-    p[8].innerHTML = i;
+    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${a}</a>`;
+    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${b}</a>`;
+    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${c}</a>`;
+    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${d}</a>`;
+    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${e}</a>`;
+    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${f}</a>`;
+    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${g}</a>`;
+    p[7].innerHTML = `<a onmouseover="this.style.color= '${h}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${h.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${h}</a>`;
+    p[8].innerHTML = `<a onmouseover="this.style.color= '${i}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${i.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${i}</a>`;
   } else if (span.length == 10) {
-    p[0].innerHTML = a;
-    p[1].innerHTML = b;
-    p[2].innerHTML = c;
-    p[3].innerHTML = d;
-    p[4].innerHTML = e;
-    p[5].innerHTML = f;
-    p[6].innerHTML = g;
-    p[7].innerHTML = h;
-    p[8].innerHTML = i;
-    p[9].innerHTML = j;
+    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${a}</a>`;
+    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${b}</a>`;
+    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${c}</a>`;
+    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${d}</a>`;
+    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${e}</a>`;
+    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${f}</a>`;
+    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${g}</a>`;
+    p[7].innerHTML = `<a onmouseover="this.style.color= '${h}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${h.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${h}</a>`;
+    p[8].innerHTML = `<a onmouseover="this.style.color= '${i}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${i.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${i}</a>`;
+    p[9].innerHTML = `<a onmouseover="this.style.color= '${j}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${j.replace("#", "")}&rlz=1C1ISCS_pt-PTBR980BR980&sourceid=chrome&ie=UTF-8">${j}</a>`;
   }
 }
 
