@@ -124,7 +124,6 @@ span {
     display: inline-block;
     margin: 7px;
     margin-bottom: 26px;
-    box-shadow: 2px 2px 7px rgb(190, 190, 190);
     border-radius: 10px;
     /* containing the colors */
 }
@@ -162,7 +161,7 @@ input {
 }
 
 #generate:hover {
-    background-color: rgb(222, 207, 230);
+    background-color: rgb(197, 176, 209);
 }
 
 #generate:active {
