@@ -1,3 +1,25 @@
+@keyframes showUp {
+    from {
+        margin-left: 30px;
+        opacity: 0;
+    }
+
+    to {
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes goUp {
+    from {
+        margin-top: 250px;
+    }
+
+    to {
+        margin-top: 25px;
+    }
+}
+
 @font-face {
     font-family: myFont;
     src: url(./SourceCodePro-VariableFont_wght.ttf);
@@ -7,6 +29,7 @@ body {
     text-align: center;
     font-family: myFont;
     background-color: whitesmoke;
+    overflow: hidden;
 }
 
 h2 {
@@ -21,8 +44,6 @@ h2 {
 
 .content {
     display: inline-block;
-    transition: all 0.1s ease;
-    transform: scale(1)
         /* div containing radio buttons and labels */
 }
 
@@ -30,10 +51,13 @@ h2 {
     display: none;
 }
 
+#container input[type="radio"]:checked+label {
+    background-color: rgb(222, 207, 230);
+}
+
 #container label {
     background-color: rgb(226, 226, 226);
     border: none;
-    box-shadow: 2px 2px 7px rgb(190, 190, 190);
     font-family: myFont;
     font-size: small;
     cursor: pointer;
@@ -44,15 +68,6 @@ h2 {
     padding-right: 35px;
     border-radius: 10px;
     outline: none;
-}
-
-.content:hover {
-    transform: scale(1.1) perspective(1px);
-}
-
-#container input[type="radio"]:checked+label {
-    background-color: rgb(222, 207, 230);
-    box-shadow: 2px 2px 7px rgb(197, 176, 209);
 }
 
 input[type=range] {
@@ -73,7 +88,6 @@ input[type=range]::-webkit-slider-thumb {
     height: 13px;
     width: 13px;
     border-radius: 50%;
-    box-shadow: 2px 2px 4px rgb(163, 158, 158);
     background: rgb(197, 176, 209);
     margin-top: -4px;
     cursor: pointer;
@@ -86,6 +100,7 @@ output {
 }
 
 span {
+    animation: showUp 0.5s ease 0.1s 1 normal both;
     height: 350px;
     width: 8%;
     display: inline-block;
@@ -116,10 +131,8 @@ input {
 #generate {
     background-color: rgb(226, 226, 226);
     border: none;
-    box-shadow: 2px 2px 7px rgb(190, 190, 190);
     font-family: myFont;
     font-size: medium;
-    font-weight: bold;
     cursor: pointer;
     margin-top: 25px;
     padding: 10px;
@@ -127,17 +140,15 @@ input {
     padding-right: 60px;
     border-radius: 10px;
     outline: none;
-    transition: all 0.1s ease;
-    transform: scale(1)
+    transition: all 0.4s ease;
 }
 
 #generate:hover {
-    transform: scale(1.1);
+    background-color: rgb(215, 190, 228);
 }
 
 #generate:active {
-    background-color: rgb(222, 207, 230);
-    box-shadow: 2px 2px 7px rgb(197, 176, 209);
+    background-color: rgb(226, 226, 226);
 }
 
 a {

@@ -36,7 +36,7 @@ Project is created with:
 
 ## ⏱️ Status
 
-For now, this project is finished. Possibly in the future I might add new features.
+This project is finished.
 
 ## 💡 Inspiration
 
