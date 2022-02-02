@@ -479,4 +479,6 @@ function colorsDark() { // put dark colors on span.
 
 function height() { // when the button generate is clicked, h2 goes up (and consequently the rest of the elements).
   h2.style.animation = "goUp 0.4s ease 0s 1 normal both";
+  let body = document.querySelector("body");
+  body.style.animation = "overflowBody 0.1s ease 0.4s 1 normal both"
 }

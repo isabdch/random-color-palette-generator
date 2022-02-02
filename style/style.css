@@ -20,6 +20,16 @@
     }
 }
 
+@keyframes overflowBody {
+    from {
+        overflow: hidden;
+    }
+
+    to {
+        overflow: auto;
+    }
+}
+
 @font-face {
     font-family: myFont;
     src: url(./SourceCodePro-VariableFont_wght.ttf);
@@ -29,7 +39,6 @@ body {
     text-align: center;
     font-family: myFont;
     background-color: whitesmoke;
-    overflow: hidden;
 }
 
 h2 {
@@ -171,7 +180,7 @@ input {
 #gHub {
     left: 0;
     top: 0;
-    position: fixed;
+    position: absolute;
     margin-top: 10px;
     margin-left: 10px;
     opacity: 0.5;
