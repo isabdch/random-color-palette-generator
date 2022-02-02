@@ -134,15 +134,19 @@ span {
     margin: 7px;
     margin-bottom: 26px;
     border-radius: 10px;
+    position: relative;
     /* containing the colors */
 }
 
 p {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
     margin-top: 280px;
     display: inline-block;
     background-color: rgb(245, 245, 245);
     height: 35px;
-    width: 100%;
+    width: 95%;
     font-family: myFont;
     font-weight: bold;
     line-height: 35px;
