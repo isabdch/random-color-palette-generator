@@ -82,6 +82,7 @@ h2 {
 input[type=range] {
     -webkit-appearance: none;
     margin-top: -4px;
+    background: transparent;
 }
 
 input[type=range]:focus {
