@@ -1,7 +1,7 @@
 @keyframes showUp {
     from {
-        margin-left: 20px;
-        opacity: 0;
+        margin-left: 15px;
+        opacity: 0.4;
     }
 
     to {
@@ -12,11 +12,11 @@
 
 @keyframes goUp {
     from {
-        margin-top: 250px;
+        margin-top: 240px;
     }
 
     to {
-        margin-top: 25px;
+        margin-top: 20px;
     }
 }
 
@@ -38,22 +38,22 @@
 body {
     text-align: center;
     font-family: myFont;
-    background-color: whitesmoke;
+    background-color: rgb(245, 245, 245);
 }
 
 h2 {
-    margin-top: 250px;
+    margin-top: 240px;
 }
 
 #container {
-    margin-top: 25px;
-    margin-bottom: 30px;
+    margin-top: 24px;
+    margin-bottom: 29px;
     /* div containing default, pastel and dark buttons */
 }
 
 .content {
     display: inline-block;
-        /* div containing radio buttons and labels */
+    /* div containing radio buttons and labels */
 }
 
 #container input[type="radio"] {
@@ -61,27 +61,44 @@ h2 {
 }
 
 #container input[type="radio"]:checked+label {
-    background-color: rgb(222, 207, 230);
+    background-color: rgb(245, 245, 245);
 }
 
 #container label {
-    background-color: rgb(226, 226, 226);
-    border: none;
+    letter-spacing: 1px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: 0;
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
     font-family: myFont;
     font-size: small;
-    cursor: pointer;
-    margin-left: 14.5px;
-    margin-right: 14.5px;
-    padding: 8px;
-    padding-left: 35px;
-    padding-right: 35px;
-    border-radius: 10px;
     outline: none;
+    transition: all 0.4s ease;
+}
+
+#container label::after {
+    content: "";
+    background-color: rgb(220, 186, 255);
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: all 0.2s ease;
+}
+
+#container label:hover::after {
+    top: 0;
+    left: 0;
 }
 
 input[type=range] {
     -webkit-appearance: none;
-    margin-top: -4px;
     background: transparent;
 }
 
@@ -90,17 +107,20 @@ input[type=range]:focus {
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-    height: 5px;
+    height: 7px;
+    margin-top: -8px;
     border: none;
     border-radius: 20px;
-    background-color: rgb(218, 214, 214);
+    background-color: rgba(218, 214, 214, 0);
+    border: 1px solid black;
 }
 
 input[type=range]::-moz-range-track {
     height: 5px;
     border: none;
     border-radius: 20px;
-    background-color: rgb(218, 214, 214);
+    background-color: rgba(218, 214, 214, 0);
+    border: 1px solid black;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -109,7 +129,8 @@ input[type=range]::-webkit-slider-thumb {
     height: 13px;
     width: 13px;
     border-radius: 50%;
-    background: rgb(197, 176, 209);
+    background: rgb(220, 186, 255);
+    border: 1px solid black;
     margin-top: -4px;
     cursor: pointer;
 }
@@ -120,38 +141,36 @@ input[type=range]::-moz-range-thumb {
     height: 13px;
     width: 13px;
     border-radius: 50%;
-    background: rgb(197, 176, 209);
-    margin-top: -4px;
+    background: rgb(220, 186, 255);
+    border: 1px solid black;
     cursor: pointer;
 }
 
 output {
-    color: rgb(163, 158, 158);
+    color: rgb(134, 133, 133);
     margin-left: 2px;
     font-size: small;
 }
 
 span {
     animation: showUp 0.5s ease 0.1s 1 normal both;
-    height: 350px;
+    height: 345px;
     width: 8%;
     display: inline-block;
-    margin: 7px;
-    margin-bottom: 26px;
-    border-radius: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 4px rgb(185, 185, 185);
+
     position: relative;
     /* containing the colors */
 }
 
 p {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
     margin-top: 280px;
     display: inline-block;
     background-color: rgb(245, 245, 245);
     height: 35px;
-    width: 95%;
+    width: 100%;
     font-family: myFont;
     font-weight: bold;
     line-height: 35px;
@@ -164,26 +183,41 @@ input {
 }
 
 #generate {
-    background-color: rgb(226, 226, 226);
-    border: none;
     font-family: myFont;
     font-size: medium;
-    cursor: pointer;
-    margin-top: 25px;
+    font-weight: bold;
+    margin-top: 20px;
     padding: 10px;
     padding-left: 60px;
     padding-right: 60px;
-    border-radius: 10px;
-    outline: none;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
 }
 
-#generate:hover {
-    background-color: rgb(197, 176, 209);
+#generate::after {
+    content: "";
+    background-color: rgb(216, 181, 252);
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: all 0.2s ease;
+}
+
+#generate:hover::after {
+    top: 0;
+    left: 0;
 }
 
 #generate:active {
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(245, 245, 245);
 }
 
 #gHub {
@@ -207,9 +241,15 @@ input {
     transition: all 0.2s ease;
 }
 
+@media screen and (max-width: 1000px) {
+    span {
+        width: 12%;
+    }
+}
+
 @media screen and (max-width: 800px) {
-    p {
-        font-size: x-small;
+    span {
+        width: 15%;
     }
 }
 
