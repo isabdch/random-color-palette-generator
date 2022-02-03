@@ -8,7 +8,7 @@
 ![](https://img.shields.io/github/license/isabdch/random-color-palette-generator?color=%23e998cd&style=for-the-badge)
 
  ## [SITE HERE](https://isabdch.github.io/random-color-palette-generator/)
-![](images/color-palette.png)
+![](images/screenshot.png)
 
 ## 📖 Table of Contents
 
