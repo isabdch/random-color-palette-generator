@@ -1,14 +1,14 @@
 # Random Collor Palette Generator Website
 
-![](https://img.shields.io/github/forks/isabdch/random-color-palette-generator?color=%23dcbaff&style=for-the-badge)
-![](https://img.shields.io/github/languages/count/isabdch/random-color-palette-generator?color=%23dcbaff&style=for-the-badge)
-![](https://img.shields.io/github/repo-size/isabdch/random-color-palette-generator?color=%23dcbaff&style=for-the-badge)
-![](https://img.shields.io/github/issues/isabdch/random-color-palette-generator?color=%23dcbaff&style=for-the-badge)
-![](https://img.shields.io/github/stars/isabdch/random-color-palette-generator?color=%23dcbaff&style=for-the-badge)
-![](https://img.shields.io/github/license/isabdch/random-color-palette-generator?color=%23dcbaff&style=for-the-badge)
+![](https://img.shields.io/github/forks/isabdch/random-color-palette-generator?color=%2360ef26&style=for-the-badge)
+![](https://img.shields.io/github/languages/count/isabdch/random-color-palette-generator?color=%2360ef26&style=for-the-badge)
+![](https://img.shields.io/github/repo-size/isabdch/random-color-palette-generator?color=%2360ef26&style=for-the-badge)
+![](https://img.shields.io/github/issues/isabdch/random-color-palette-generator?color=%2360ef26&style=for-the-badge)
+![](https://img.shields.io/github/stars/isabdch/random-color-palette-generator?color=%2360ef26&style=for-the-badge)
+![](https://img.shields.io/github/license/isabdch/random-color-palette-generator?color=%2360ef26&style=for-the-badge)
 
  ## [SITE HERE](https://isabdch.github.io/random-color-palette-generator/)
-![](images/screenshot.png)
+![](images/screenshot1.png)
 
 ## 📖 Table of Contents
 
