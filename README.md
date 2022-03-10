@@ -24,15 +24,9 @@ Project is created with:
 
 - ### HTML
 
-  To create basic HTML content, buttons, inputs, etc.
-
 - ### CSS
 
-  To stylize the HTML elements. I used animation on the buttons to give them a cool visual and an appearance of more interactivity.
-
 - ### JavaScript
-
-  I used multiple events and functions to create the palette, give it all its respective colors accordingly to the type of color and its own HEX codes. Beyond that, I also added a function that makes it possible to choose the palette range.
 
 ## ⏱️ Status
 
