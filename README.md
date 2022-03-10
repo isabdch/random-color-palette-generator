@@ -34,4 +34,4 @@ This project is finished.
 
 ## 💡 Inspiration
 
-Besides programming, I really enjoy drawing on digital. So it's very common for me to go searching for inspiration. I frequently go to [Coolors.co](https://coolors.co/) to get color palettes inspiration and eventually this project idea popped into my head. At the moment I'm studying JavaScript, so with all of this I could combine business with pleasure. I could practice my skills and also enjoy the project because it's related to something I like.
+Besides programming, I really enjoy drawing on digital. So I frequently go to [Coolors.co](https://coolors.co/) to get color palettes inspiration and eventually this project idea popped into my head and I could combine business with pleasure. I practiced my skills and also appreciated the project creation because it's related to something I enjoy.
