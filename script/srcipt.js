@@ -5,14 +5,15 @@ let p = document.getElementsByTagName("p");
 let Default = document.getElementById("default");
 let pastel = document.getElementById("pastel");
 let dark = document.getElementById("dark");
-let range = document.getElementById("range"); 
+let range = document.getElementById("range");
 
-generate.addEventListener("click", createPalette); 
+generate.addEventListener("click", createPalette);
 Default.addEventListener("click", DefaultS);
 pastel.addEventListener("click", pastelS);
 dark.addEventListener("click", darkS);
 
-function removeE() { // function to prevent variable generate has two events and get errors.
+function removeE() {
+  // function to prevent variable generate has two events and get errors.
   let newGenerate = generate.cloneNode();
   newGenerate.innerHTML = "Generate";
   generate.replaceWith(newGenerate);
@@ -20,59 +21,48 @@ function removeE() { // function to prevent variable generate has two events and
   generate.addEventListener("click", createPalette);
 }
 
-function DefaultS() { // if checked, default radio button will show default colors.
+function DefaultS() {
+  // if checked, default radio button will show default colors.
   removeE();
   Default.setAttribute("checked", true);
   if ((Default.checked = true)) {
     generate.addEventListener("click", colorsDefault);
-    generate.addEventListener("click", height);
+    generate.addEventListener("click", animation);
   }
 }
 
-function darkS() { // if checked, dark radio button will show dark colors.
+function darkS() {
+  // if checked, dark radio button will show dark colors.
   removeE();
   dark.setAttribute("checked", true);
   if ((dark.checked = true)) {
     generate.addEventListener("click", colorsDark);
-    generate.addEventListener("click", height);
+    generate.addEventListener("click", animation);
   }
 }
 
-function pastelS() { // if checked, pastel radio button will show pastel colors.
+function pastelS() {
+  // if checked, pastel radio button will show pastel colors.
   removeE();
   pastel.setAttribute("checked", true);
   if ((pastel.checked = true)) {
     generate.addEventListener("click", colorsPastel);
-    generate.addEventListener("click", height);
+    generate.addEventListener("click", animation);
   }
 }
 
 generate.addEventListener("click", colorsDefault);
 
-generate.addEventListener("click", height);
+generate.addEventListener("click", animation);
 
-function createPalette() { // create span with colors.
+function createPalette() {
+  // create span with colors.
   let div = document.getElementById("palette");
-  if (range.value == 3) {
-    div.innerHTML = "<span><p></p></span>".repeat(3);
-  } else if (range.value == 4) {
-    div.innerHTML = "<span><p></p></span>".repeat(4);
-  } else if (range.value == 5) {
-    div.innerHTML = "<span><p></p></span>".repeat(5);
-  } else if (range.value == 6) {
-    div.innerHTML = "<span><p></p></span>".repeat(6);
-  } else if (range.value == 7) {
-    div.innerHTML = "<span><p></p></span>".repeat(7);
-  } else if (range.value == 8) {
-    div.innerHTML = "<span><p></p></span>".repeat(8);
-  } else if (range.value == 9) {
-    div.innerHTML = "<span><p></p></span>".repeat(9);
-  } else if (range.value == 10) {
-    div.innerHTML = "<span><p></p></span>".repeat(10);
-  }
+  div.innerHTML = "<span><p></p></span>".repeat(range.value);
 }
 
-function randomColor() { // create random default colors.
+function randomColor() {
+  // create random default colors.
   return (
     "#" +
     ("00000" + Math.floor(Math.random() * Math.pow(16, 6)).toString(16)).slice(
@@ -81,7 +71,8 @@ function randomColor() { // create random default colors.
   );
 }
 
-function randomPastel() { // create random pastel colors.
+function randomPastel() {
+  // create random pastel colors.
   let color = "#";
   for (let i = 0; i < 3; i++)
     color += (
@@ -90,7 +81,8 @@ function randomPastel() { // create random pastel colors.
   return color;
 }
 
-function randomDark() { // create random dark colors.
+function randomDark() {
+  // create random dark colors.
   let color = "#";
   for (let i = 0; i < 3; i++)
     color += (
@@ -99,386 +91,44 @@ function randomDark() { // create random dark colors.
   return color;
 }
 
-function colorsDefault() { // put default colors on span.
-  if (span.length == 3) {
-    var a = (span[0].style.backgroundColor = randomColor());
-    var b = (span[1].style.backgroundColor = randomColor());
-    var c = (span[2].style.backgroundColor = randomColor());
-  } else if (span.length == 4) {
-    var a = (span[0].style.backgroundColor = randomColor());
-    var b = (span[1].style.backgroundColor = randomColor());
-    var c = (span[2].style.backgroundColor = randomColor());
-    var d = (span[3].style.backgroundColor = randomColor());
-  } else if (span.length == 5) {
-    var a = (span[0].style.backgroundColor = randomColor());
-    var b = (span[1].style.backgroundColor = randomColor());
-    var c = (span[2].style.backgroundColor = randomColor());
-    var d = (span[3].style.backgroundColor = randomColor());
-    var e = (span[4].style.backgroundColor = randomColor());
-  } else if (span.length == 6) {
-    var a = (span[0].style.backgroundColor = randomColor());
-    var b = (span[1].style.backgroundColor = randomColor());
-    var c = (span[2].style.backgroundColor = randomColor());
-    var d = (span[3].style.backgroundColor = randomColor());
-    var e = (span[4].style.backgroundColor = randomColor());
-    var f = (span[5].style.backgroundColor = randomColor());
-  } else if (span.length == 7) {
-    var a = (span[0].style.backgroundColor = randomColor());
-    var b = (span[1].style.backgroundColor = randomColor());
-    var c = (span[2].style.backgroundColor = randomColor());
-    var d = (span[3].style.backgroundColor = randomColor());
-    var e = (span[4].style.backgroundColor = randomColor());
-    var f = (span[5].style.backgroundColor = randomColor());
-    var g = (span[6].style.backgroundColor = randomColor());
-  } else if (span.length == 8) {
-    var a = (span[0].style.backgroundColor = randomColor());
-    var b = (span[1].style.backgroundColor = randomColor());
-    var c = (span[2].style.backgroundColor = randomColor());
-    var d = (span[3].style.backgroundColor = randomColor());
-    var e = (span[4].style.backgroundColor = randomColor());
-    var f = (span[5].style.backgroundColor = randomColor());
-    var g = (span[6].style.backgroundColor = randomColor());
-    var h = (span[7].style.backgroundColor = randomColor());
-  } else if (span.length == 9) {
-    var a = (span[0].style.backgroundColor = randomColor());
-    var b = (span[1].style.backgroundColor = randomColor());
-    var c = (span[2].style.backgroundColor = randomColor());
-    var d = (span[3].style.backgroundColor = randomColor());
-    var e = (span[4].style.backgroundColor = randomColor());
-    var f = (span[5].style.backgroundColor = randomColor());
-    var g = (span[6].style.backgroundColor = randomColor());
-    var h = (span[7].style.backgroundColor = randomColor());
-    var i = (span[8].style.backgroundColor = randomColor());
-  } else if (span.length == 10) {
-    var a = (span[0].style.backgroundColor = randomColor());
-    var b = (span[1].style.backgroundColor = randomColor());
-    var c = (span[2].style.backgroundColor = randomColor());
-    var d = (span[3].style.backgroundColor = randomColor());
-    var e = (span[4].style.backgroundColor = randomColor());
-    var f = (span[5].style.backgroundColor = randomColor());
-    var g = (span[6].style.backgroundColor = randomColor());
-    var h = (span[7].style.backgroundColor = randomColor());
-    var i = (span[8].style.backgroundColor = randomColor());
-    var j = (span[9].style.backgroundColor = randomColor());
-  }
-
-  if (span.length == 3) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-  } else if (span.length == 4) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-  } else if (span.length == 5) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-  } else if (span.length == 6) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-  } else if (span.length == 7) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}">${g}</a>`;
-  } else if (span.length == 8) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}">${g}</a>`;
-    p[7].innerHTML = `<a onmouseover="this.style.color= '${h}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${h.replace("#", "")}">${h}</a>`;
-  } else if (span.length == 9) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}">${g}</a>`;
-    p[7].innerHTML = `<a onmouseover="this.style.color= '${h}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${h.replace("#", "")}">${h}</a>`;
-    p[8].innerHTML = `<a onmouseover="this.style.color= '${i}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${i.replace("#", "")}">${i}</a>`;
-  } else if (span.length == 10) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}">${g}</a>`;
-    p[7].innerHTML = `<a onmouseover="this.style.color= '${h}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${h.replace("#", "")}">${h}</a>`;
-    p[8].innerHTML = `<a onmouseover="this.style.color= '${i}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${i.replace("#", "")}">${i}</a>`;
-    p[9].innerHTML = `<a onmouseover="this.style.color= '${j}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${j.replace("#", "")}">${j}</a>`;
+function colorsDefault() {
+  // put default colors on span.
+  for (let i of span) {
+    let color = randomColor();
+    i.style.backgroundColor = color;
+    i.children[0].innerHTML = `<a onmouseover="this.style.color= '${color}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${color.replace(
+      "#",
+      ""
+    )}">${color}</a>`;
   }
 }
 
-function colorsPastel() { // put pastel colors on span.
-  if (span.length == 3) {
-    var a = (span[0].style.backgroundColor = randomPastel());
-    var b = (span[1].style.backgroundColor = randomPastel());
-    var c = (span[2].style.backgroundColor = randomPastel());
-  } else if (span.length == 4) {
-    var a = (span[0].style.backgroundColor = randomPastel());
-    var b = (span[1].style.backgroundColor = randomPastel());
-    var c = (span[2].style.backgroundColor = randomPastel());
-    var d = (span[3].style.backgroundColor = randomPastel());
-  } else if (span.length == 5) {
-    var a = (span[0].style.backgroundColor = randomPastel());
-    var b = (span[1].style.backgroundColor = randomPastel());
-    var c = (span[2].style.backgroundColor = randomPastel());
-    var d = (span[3].style.backgroundColor = randomPastel());
-    var e = (span[4].style.backgroundColor = randomPastel());
-  } else if (span.length == 6) {
-    var a = (span[0].style.backgroundColor = randomPastel());
-    var b = (span[1].style.backgroundColor = randomPastel());
-    var c = (span[2].style.backgroundColor = randomPastel());
-    var d = (span[3].style.backgroundColor = randomPastel());
-    var e = (span[4].style.backgroundColor = randomPastel());
-    var f = (span[5].style.backgroundColor = randomPastel());
-  } else if (span.length == 7) {
-    var a = (span[0].style.backgroundColor = randomPastel());
-    var b = (span[1].style.backgroundColor = randomPastel());
-    var c = (span[2].style.backgroundColor = randomPastel());
-    var d = (span[3].style.backgroundColor = randomPastel());
-    var e = (span[4].style.backgroundColor = randomPastel());
-    var f = (span[5].style.backgroundColor = randomPastel());
-    var g = (span[6].style.backgroundColor = randomPastel());
-  } else if (span.length == 8) {
-    var a = (span[0].style.backgroundColor = randomPastel());
-    var b = (span[1].style.backgroundColor = randomPastel());
-    var c = (span[2].style.backgroundColor = randomPastel());
-    var d = (span[3].style.backgroundColor = randomPastel());
-    var e = (span[4].style.backgroundColor = randomPastel());
-    var f = (span[5].style.backgroundColor = randomPastel());
-    var g = (span[6].style.backgroundColor = randomPastel());
-    var h = (span[7].style.backgroundColor = randomPastel());
-  } else if (span.length == 9) {
-    var a = (span[0].style.backgroundColor = randomPastel());
-    var b = (span[1].style.backgroundColor = randomPastel());
-    var c = (span[2].style.backgroundColor = randomPastel());
-    var d = (span[3].style.backgroundColor = randomPastel());
-    var e = (span[4].style.backgroundColor = randomPastel());
-    var f = (span[5].style.backgroundColor = randomPastel());
-    var g = (span[6].style.backgroundColor = randomPastel());
-    var h = (span[7].style.backgroundColor = randomPastel());
-    var i = (span[8].style.backgroundColor = randomPastel());
-  } else if (span.length == 10) {
-    var a = (span[0].style.backgroundColor = randomPastel());
-    var b = (span[1].style.backgroundColor = randomPastel());
-    var c = (span[2].style.backgroundColor = randomPastel());
-    var d = (span[3].style.backgroundColor = randomPastel());
-    var e = (span[4].style.backgroundColor = randomPastel());
-    var f = (span[5].style.backgroundColor = randomPastel());
-    var g = (span[6].style.backgroundColor = randomPastel());
-    var h = (span[7].style.backgroundColor = randomPastel());
-    var i = (span[8].style.backgroundColor = randomPastel());
-    var j = (span[9].style.backgroundColor = randomPastel());
-  }
-
-  if (span.length == 3) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-  } else if (span.length == 4) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-  } else if (span.length == 5) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-  } else if (span.length == 6) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-  } else if (span.length == 7) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}">${g}</a>`;
-  } else if (span.length == 8) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}">${g}</a>`;
-    p[7].innerHTML = `<a onmouseover="this.style.color= '${h}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${h.replace("#", "")}">${h}</a>`;
-  } else if (span.length == 9) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}">${g}</a>`;
-    p[7].innerHTML = `<a onmouseover="this.style.color= '${h}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${h.replace("#", "")}">${h}</a>`;
-    p[8].innerHTML = `<a onmouseover="this.style.color= '${i}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${i.replace("#", "")}">${i}</a>`;
-  } else if (span.length == 10) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}">${g}</a>`;
-    p[7].innerHTML = `<a onmouseover="this.style.color= '${h}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${h.replace("#", "")}">${h}</a>`;
-    p[8].innerHTML = `<a onmouseover="this.style.color= '${i}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${i.replace("#", "")}">${i}</a>`;
-    p[9].innerHTML = `<a onmouseover="this.style.color= '${j}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${j.replace("#", "")}">${j}</a>`;
+function colorsPastel() {
+  // put pastel colors on span.
+  for (let i of span) {
+    let color = randomPastel();
+    i.style.backgroundColor = color;
+    i.children[0].innerHTML = `<a onmouseover="this.style.color= '${color}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${color.replace(
+      "#",
+      ""
+    )}">${color}</a>`;
   }
 }
 
-function colorsDark() { // put dark colors on span.
-  if (span.length == 3) {
-    var a = (span[0].style.backgroundColor = randomDark());
-    var b = (span[1].style.backgroundColor = randomDark());
-    var c = (span[2].style.backgroundColor = randomDark());
-  } else if (span.length == 4) {
-    var a = (span[0].style.backgroundColor = randomDark());
-    var b = (span[1].style.backgroundColor = randomDark());
-    var c = (span[2].style.backgroundColor = randomDark());
-    var d = (span[3].style.backgroundColor = randomDark());
-  } else if (span.length == 5) {
-    var a = (span[0].style.backgroundColor = randomDark());
-    var b = (span[1].style.backgroundColor = randomDark());
-    var c = (span[2].style.backgroundColor = randomDark());
-    var d = (span[3].style.backgroundColor = randomDark());
-    var e = (span[4].style.backgroundColor = randomDark());
-  } else if (span.length == 6) {
-    var a = (span[0].style.backgroundColor = randomDark());
-    var b = (span[1].style.backgroundColor = randomDark());
-    var c = (span[2].style.backgroundColor = randomDark());
-    var d = (span[3].style.backgroundColor = randomDark());
-    var e = (span[4].style.backgroundColor = randomDark());
-    var f = (span[5].style.backgroundColor = randomDark());
-  } else if (span.length == 7) {
-    var a = (span[0].style.backgroundColor = randomDark());
-    var b = (span[1].style.backgroundColor = randomDark());
-    var c = (span[2].style.backgroundColor = randomDark());
-    var d = (span[3].style.backgroundColor = randomDark());
-    var e = (span[4].style.backgroundColor = randomDark());
-    var f = (span[5].style.backgroundColor = randomDark());
-    var g = (span[6].style.backgroundColor = randomDark());
-  } else if (span.length == 8) {
-    var a = (span[0].style.backgroundColor = randomDark());
-    var b = (span[1].style.backgroundColor = randomDark());
-    var c = (span[2].style.backgroundColor = randomDark());
-    var d = (span[3].style.backgroundColor = randomDark());
-    var e = (span[4].style.backgroundColor = randomDark());
-    var f = (span[5].style.backgroundColor = randomDark());
-    var g = (span[6].style.backgroundColor = randomDark());
-    var h = (span[7].style.backgroundColor = randomDark());
-  } else if (span.length == 9) {
-    var a = (span[0].style.backgroundColor = randomDark());
-    var b = (span[1].style.backgroundColor = randomDark());
-    var c = (span[2].style.backgroundColor = randomDark());
-    var d = (span[3].style.backgroundColor = randomDark());
-    var e = (span[4].style.backgroundColor = randomDark());
-    var f = (span[5].style.backgroundColor = randomDark());
-    var g = (span[6].style.backgroundColor = randomDark());
-    var h = (span[7].style.backgroundColor = randomDark());
-    var i = (span[8].style.backgroundColor = randomDark());
-  } else if (span.length == 10) {
-    var a = (span[0].style.backgroundColor = randomDark());
-    var b = (span[1].style.backgroundColor = randomDark());
-    var c = (span[2].style.backgroundColor = randomDark());
-    var d = (span[3].style.backgroundColor = randomDark());
-    var e = (span[4].style.backgroundColor = randomDark());
-    var f = (span[5].style.backgroundColor = randomDark());
-    var g = (span[6].style.backgroundColor = randomDark());
-    var h = (span[7].style.backgroundColor = randomDark());
-    var i = (span[8].style.backgroundColor = randomDark());
-    var j = (span[9].style.backgroundColor = randomDark());
-  }
-
-  if (span.length == 3) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-  } else if (span.length == 4) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-  } else if (span.length == 5) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-  } else if (span.length == 6) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-  } else if (span.length == 7) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}">${g}</a>`;
-  } else if (span.length == 8) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}">${g}</a>`;
-    p[7].innerHTML = `<a onmouseover="this.style.color= '${h}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${h.replace("#", "")}">${h}</a>`;
-  } else if (span.length == 9) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}">${g}</a>`;
-    p[7].innerHTML = `<a onmouseover="this.style.color= '${h}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${h.replace("#", "")}">${h}</a>`;
-    p[8].innerHTML = `<a onmouseover="this.style.color= '${i}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${i.replace("#", "")}">${i}</a>`;
-  } else if (span.length == 10) {
-    p[0].innerHTML = `<a onmouseover="this.style.color= '${a}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${a.replace("#", "")}">${a}</a>`;
-    p[1].innerHTML = `<a onmouseover="this.style.color= '${b}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${b.replace("#", "")}">${b}</a>`;
-    p[2].innerHTML = `<a onmouseover="this.style.color= '${c}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${c.replace("#", "")}">${c}</a>`;
-    p[3].innerHTML = `<a onmouseover="this.style.color= '${d}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${d.replace("#", "")}">${d}</a>`;
-    p[4].innerHTML = `<a onmouseover="this.style.color= '${e}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${e.replace("#", "")}">${e}</a>`;
-    p[5].innerHTML = `<a onmouseover="this.style.color= '${f}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${f.replace("#", "")}">${f}</a>`;
-    p[6].innerHTML = `<a onmouseover="this.style.color= '${g}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${g.replace("#", "")}">${g}</a>`;
-    p[7].innerHTML = `<a onmouseover="this.style.color= '${h}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${h.replace("#", "")}">${h}</a>`;
-    p[8].innerHTML = `<a onmouseover="this.style.color= '${i}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${i.replace("#", "")}">${i}</a>`;
-    p[9].innerHTML = `<a onmouseover="this.style.color= '${j}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${j.replace("#", "")}">${j}</a>`;
+function colorsDark() {
+  // put dark colors on span.
+  for (let i of span) {
+    let color = randomDark();
+    i.style.backgroundColor = color;
+    i.children[0].innerHTML = `<a onmouseover="this.style.color= '${color}'" onmouseout="this.style.color= 'black'" class="hexLink" target="_blank" href="https://www.google.com/search?q=%23${color.replace(
+      "#",
+      ""
+    )}">${color}</a>`;
   }
 }
 
-function height() { // when the button generate is clicked, h2 goes up (and consequently the rest of the elements).
+function animation() {
   h2.style.animation = "goUp 0.4s ease 0s 1 normal both";
   let body = document.querySelector("body");
-  body.style.animation = "overflowBody 0.1s ease 0.4s 1 normal both"
+  body.style.animation = "overflowBody 0.1s ease 0.4s 1 normal both";
 }

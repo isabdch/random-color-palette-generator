@@ -1,13 +1,3 @@
-@keyframes showUp {
-    from {
-        margin-left: 15px;
-    }
-
-    to {
-        margin-right: 0;
-    }
-}
-
 @keyframes goUp {
     from {
         margin-top: 240px;
