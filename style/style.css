@@ -1,246 +1,245 @@
 @keyframes goUp {
-    from {
-        margin-top: 240px;
-    }
+  from {
+    margin-top: 240px;
+  }
 
-    to {
-        margin-top: 20px;
-    }
+  to {
+    margin-top: 20px;
+  }
 }
 
 @keyframes overflowBody {
-    from {
-        overflow: hidden;
-    }
+  from {
+    overflow: hidden;
+  }
 
-    to {
-        overflow: auto;
-    }
+  to {
+    overflow: auto;
+  }
 }
 
 @font-face {
-    font-family: myFont;
-    src: url(./SourceCodePro-VariableFont_wght.ttf);
+  font-family: myFont;
+  src: url(./SourceCodePro-VariableFont_wght.ttf);
 }
 
 body {
-    text-align: center;
-    font-family: myFont;
-    background-color: rgb(245, 245, 245);
+  text-align: center;
+  font-family: myFont;
+  background-color: rgb(245, 245, 245);
 }
 
 h2 {
-    margin-top: 240px;
+  margin-top: 240px;
 }
 
 #container {
-    margin-top: 24px;
-    margin-bottom: 29px;
-    /* div containing default, pastel and dark buttons */
+  margin-top: 24px;
+  margin-bottom: 29px;
+  /* div containing default, pastel and dark buttons */
 }
 
 .content {
-    display: inline-block;
-    /* div containing radio buttons and labels */
+  display: inline-block;
+  /* div containing radio buttons and labels */
 }
 
 #container input[type="radio"] {
-    display: none;
+  display: none;
 }
 
-#container input[type="radio"]:checked+label {
-    background-color: rgb(206, 206, 206);
+#container input[type="radio"]:checked + label {
+  background-color: rgb(206, 206, 206);
 }
 
 #container label {
-    letter-spacing: 1px;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    outline: 0;
-    cursor: pointer;
-    position: relative;
-    background-color: rgb(224, 224, 224);
-    font-family: myFont;
-    font-size: small;
-    outline: none;
-    transition: all 0.3s ease;
+  letter-spacing: 1px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: 0;
+  cursor: pointer;
+  position: relative;
+  background-color: rgb(224, 224, 224);
+  font-family: myFont;
+  font-size: small;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
 #container label:hover {
-    background-color: rgb(206, 206, 206);
+  background-color: rgb(206, 206, 206);
 }
 
-input[type=range] {
-    -webkit-appearance: none;
-    background: transparent;
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
 }
 
-input[type=range]:focus {
-    outline: none;
+input[type="range"]:focus {
+  outline: none;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
-    height: 6px;
-    margin-top: -8px;
-    border: none;
-    border-radius: 20px;
-    background-color: rgb(218, 218, 218);
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  margin-top: -8px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(218, 218, 218);
 }
 
-input[type=range]::-moz-range-track {
-    height: 5px;
-    border: none;
-    border-radius: 20px;
-    background-color: rgb(218, 218, 218);
+input[type="range"]::-moz-range-track {
+  height: 5px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(218, 218, 218);
 }
 
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 13px;
-    width: 13px;
-    border-radius: 50%;
-    background: rgb(182, 182, 182);
-    margin-top: -4px;
-    cursor: pointer;
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: rgb(182, 182, 182);
+  margin-top: -4px;
+  cursor: pointer;
 }
 
-input[type=range]::-moz-range-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 13px;
-    width: 13px;
-    border-radius: 50%;
-    background: rgb(182, 182, 182);
-    cursor: pointer;
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: rgb(182, 182, 182);
+  cursor: pointer;
 }
 
 output {
-    color: rgb(134, 133, 133);
-    margin-left: 2px;
-    font-size: small;
+  color: rgb(134, 133, 133);
+  margin-left: 2px;
+  font-size: small;
 }
 
 span {
-    animation: showUp 0.5s ease 0.1s 1 normal both;
-    height: 345px;
-    width: 8%;
-    display: inline-block;
-    margin: 10px;
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 4px rgb(185, 185, 185);
-
-    position: relative;
-    /* containing the colors */
+  animation: showUp 0.5s ease 0.1s 1 normal both;
+  height: 345px;
+  width: 8.2vw;
+  display: inline-block;
+  margin: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 1px 5px rgb(185, 185, 185);
+  border-radius: 15px;
+  position: relative;
+  /* containing the colors */
 }
 
 p {
-    margin-top: 280px;
-    display: inline-block;
-    background-color: rgb(245, 245, 245);
-    height: 35px;
-    width: 100%;
-    font-family: myFont;
-    font-weight: bold;
-    line-height: 35px;
-    font-size: small;
-    /* containing the hex codes */
+  margin-top: 280px;
+  display: inline-block;
+  background-color: rgb(245, 245, 245);
+  height: 35px;
+  width: 100%;
+  font-family: myFont;
+  font-weight: bold;
+  line-height: 35px;
+  font-size: small;
+  /* containing the hex codes */
 }
 
 input {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 #generate {
-    font-family: myFont;
-    font-size: medium;
-    font-weight: bold;
-    margin-top: 20px;
-    padding: 10px;
-    padding-left: 60px;
-    padding-right: 60px;
-    transition: all 0.3s ease;
-    letter-spacing: 1px;
-    outline: 0;
-    cursor: pointer;
-    background-color: rgb(224, 224, 224);
-    border: none;
-    position: relative;
+  font-family: myFont;
+  font-size: medium;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  outline: 0;
+  cursor: pointer;
+  background-color: rgb(224, 224, 224);
+  border: none;
+  position: relative;
 }
 
 #generate:hover {
-    background-color: rgb(206, 206, 206);
+  background-color: rgb(206, 206, 206);
 }
 
 #generate:active {
-    background-color: rgb(224, 224, 224);
+  background-color: rgb(224, 224, 224);
 }
 
 #gHub {
-    left: 0;
-    top: 0;
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 10px;
-    opacity: 0.5;
-    transition: all 0.4s ease;
+  left: 0;
+  top: 0;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+  opacity: 0.5;
+  transition: all 0.4s ease;
 }
 
 #gHub:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .hexLink {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    transition: all 0.2s ease;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 @media screen and (max-width: 1000px) {
-    span {
-        width: 12%;
-    }
+  span {
+    width: 12%;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    span {
-        width: 15%;
-    }
+  span {
+    width: 15%;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .content {
-        display: block;
-        margin-top: 30px;
-    }
+  .content {
+    display: block;
+    margin-top: 30px;
+  }
 
-    p {
-        font-size: small;
-    }
+  p {
+    font-size: small;
+  }
 
-    span {
-        width: 30%;
-    }
+  span {
+    width: 30%;
+  }
 
-    #generate {
-        margin-bottom: 20px;
-    }
+  #generate {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 300px) {
-    .content {
-        display: block;
-        margin-top: 30px;
-    }
+  .content {
+    display: block;
+    margin-top: 30px;
+  }
 
-    span {
-        width: 30%;
-    }
+  span {
+    width: 30%;
+  }
 
-    #generate {
-        margin-bottom: 20px;
-    }
-
+  #generate {
+    margin-bottom: 20px;
+  }
 }

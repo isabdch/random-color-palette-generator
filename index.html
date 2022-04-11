@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Color Palette Generator</title>
-    <link href="./style/style.css" rel="stylesheet">
-    <link href="./images/color-circle.png" rel="icon">
+    <link href="./style/style.css" rel="stylesheet" />
+    <link href="./images/color-circle.png" rel="icon" />
     <script src="./script/srcipt.js" defer></script>
-</head>
+  </head>
 
-<body>
-    <a id="gHub" href="https://github.com/isabdch" target="_blank"><img src="./images/github.png" height="23px"></a>
+  <body>
+    <a id="gHub" href="https://github.com/isabdch" target="_blank"
+      ><img src="./images/github.png" height="23px"
+    /></a>
     <h2>Random Color Palette Generator</h2>
     <div id="container">
-        <div class="content">
-            <input id="default" type="radio" value="default" name="colortype" checked>
-            <label for="default">Default</label>
-        </div>
-        <div class="content">
-            <input id="pastel" type="radio" value="pastel" name="colortype">
-            <label for="pastel">Pastel</label>
-        </div>
-        <div class="content">
-            <input id="dark" type="radio" value="dark" name="colortype">
-            <label for="dark">Dark</label>
-        </div>
+      <div class="content">
+        <input
+          id="default"
+          type="radio"
+          value="default"
+          name="colortype"
+          checked
+        />
+        <label for="default">Default</label>
+      </div>
+      <div class="content">
+        <input id="pastel" type="radio" value="pastel" name="colortype" />
+        <label for="pastel">Pastel</label>
+      </div>
+      <div class="content">
+        <input id="dark" type="radio" value="dark" name="colortype" />
+        <label for="dark">Dark</label>
+      </div>
     </div>
     <div id="palette"></div>
-    Palette range: <input id="range" type="range" min="3" max="10" value="5"
-        oninput="this.nextElementSibling.value = this.value"><output>5</output><br>
+    Palette range:
+    <input
+      id="range"
+      type="range"
+      min="3"
+      max="10"
+      value="5"
+      oninput="this.nextElementSibling.value = this.value"
+    /><output>5</output><br />
     <!-- oninput to show the range length -->
-    <button id="generate">Generate</button><br>
-</body>
-
+    <button id="generate">Generate</button><br />
+  </body>
 </html>

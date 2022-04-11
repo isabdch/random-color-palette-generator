@@ -13,7 +13,6 @@ pastel.addEventListener("click", pastelS);
 dark.addEventListener("click", darkS);
 
 function removeE() {
-  // function to prevent variable generate has two events and get errors.
   let newGenerate = generate.cloneNode();
   newGenerate.innerHTML = "Generate";
   generate.replaceWith(newGenerate);
@@ -52,7 +51,6 @@ function pastelS() {
 }
 
 generate.addEventListener("click", colorsDefault);
-
 generate.addEventListener("click", animation);
 
 function createPalette() {
